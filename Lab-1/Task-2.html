@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task-2</title>
+    <style>
+        table{
+            width: 100%;
+            text-align: center;
+            border-spacing: 24px;
+        }
+        #last td{
+            background-color: #f1f1f196;
+            width: 25%;
+            height: 200px;
+            text-align: start;
+        }
+        #last p{
+            margin-left: 10%;
+            text-transform: uppercase;
+        }
+        .para{
+            text-transform: unset;
+        }
+        #first-tr{
+            background-color: blue;
+        }
+        #cap{
+            background-color: blue;
+            color: white;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption id="cap">
+            <h2>Faculty Of Technology and Engineering</h2>
+            <p>Home &nbsp; &nbsp; / &nbsp; &nbsp;<span style="color: #92a1d2;">Faculty OF TECHNOLOGY AND ENGINEERING</span></p>
+        </caption>
+        <!-- First row that contain photo of kalabhavan  -->
+        <tr>
+            <td colspan="4">
+                <img src="./Static/kalaBhavan-by-website.jpeg" alt="Kala-bhavan" id="techo-photo">
+            </td>
+        </tr>
+        <!-- Second row that contain 4 col  -->
+        <tr id="last">
+            <!-- news -->
+            <td>
+                    <p><img src="./Static/news.png" alt="news"><b>NEWS</b></p>
+                    <p class="para">No News found</p>
+            </td>
+            <!-- notification -->
+            <td>
+                    <p><img src="./Static/notification.png" alt="notification"><b>NOTIFICATIONS</b></p>
+                    <p class="para" style="color: red;">NOTICE FOR PTD STUDENTS</p>
+            </td>
+            <!-- circular -->
+            <td>
+                <p><img src="./Static/circular.png" alt="circular"><b>circular</b></p>
+                <p class="para">No Circulars Found</p>
+            </td>
+            <!-- events -->
+            <td>
+                <p><img src="./Static/events.png" alt="events"><b>events</b></p>
+                <p class="para">No Event Found</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
