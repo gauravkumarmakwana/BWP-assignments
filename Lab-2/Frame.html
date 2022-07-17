@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Document</title>
+	<style>
+		.link {
+			width: 20vw;
+			height: 90vh;
+			background-color: rgb(0, 151, 252);
+		}
+
+		.link a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.link a:hover {
+			color: black;
+		}
+
+		caption {
+			border: 2px solid black;
+			background-color: rgb(0, 151, 252);
+		}
+
+		#frampart {
+			width: 70vw;
+			height: 90vh;
+		}
+
+		body {
+			width: 90vw;
+			height: 90vh;
+		}
+
+		#iframeid {
+			width: 70vw;
+			height: 90vh;
+		}
+	</style>
+</head>
+
+<body>
+	<table border="2px solid black">
+		<caption>
+			<h1>HEADER</h1>
+		</caption>
+		<tr>
+			<td>
+				<div class="link">
+					<a href="https://www.msubaroda.ac.in/academics/FTE" target="iframe_a">Home</a>
+					<br>
+					<a href="https://www.msubaroda.ac.in/academics/FTE/aboutfaculty" target="iframe_a">About Me</a>
+					<br>
+					<a href="https://www.msubaroda.ac.in/academics/FTE/ContactUs" target="iframe_a">Contact us</a>
+				</div>
+			</td>
+			<td id="frampart">
+				<div class="frem" id="home">
+					<iframe src="" frameborder="1" id="iframeid" name="iframe_a"></iframe>
+				</div>
+			</td>
+		</tr>
+	</table>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registrstion Form</title>
+	<style>
+		body {
+			background-color: lightyellow;
+		}
+	</style>
+</head>
+
+<body>
+	<br>
+	<br>
+	<form action="er.php">
+
+		<label> Firstname </label>
+		<input type="text" name="firstname" size="15" /> <br> <br>
+		<label> Middlename: </label>
+		<input type="text" name="middlename" size="15" /> <br> <br>
+		<label> Lastname: </label>
+		<input type="text" name="lastname" size="15" /> <br> <br>
+		<label>
+			Gender :
+		</label>
+		<input type="radio" id="html" name="fav_language" value="Boy">
+		<label for="html">Boy</label>
+		<input type="radio" id="css" name="fav_language" value="Girl">
+		<label for="css">Girl</label>
+		<input type="radio" id="css" name="fav_language" value="Other">
+		<label for="css">Other</label><br>
+
+
+		<label>Course :
+		</label>
+		<select>
+			<option value="Course">Course</option>
+			<option value="BCA">BCA</option>
+			<option value="BBA">BBA</option>
+			<option value="B.Tech">B.Tech</option>
+			<option value="MBA">MBA</option>
+			<option value="MCA">MCA</option>
+			<option value="M.Tech">M.Tech</option>
+		</select>
+		<div>
+			Hobbies:
+			<a><input type="checkbox" id="Ret" name="Game" value="Playing">Playing</a>
+			<a><input type="checkbox" id="Ret" name="Game" value="Reading"> Reading</a>
+			<a><input type="checkbox" id="Ret" name="Game" value="Dancing">Dancing</a>
+
+		</div>
+
+		<label>
+			Phone :
+		</label>
+		<input type="text" name="country code" value="+91" size="2" />
+		<input type="text" name="phone" size="10" /> <br> <br>
+		Address
+		<br>
+		<textarea cols="80" rows="5" value="address">
+    </textarea>
+		<br> <br>
+		<label>Country:</label>
+		<select>
+			<option value="Course">India</option>
+			<option value="BCA">pakistan</option>
+			<option value="BCA">Other</option>
+		</select>
+		<label>State:</label>
+		<select>
+			<option value="Course">Gujarat</option>
+			<option value="BCA">Other</option>
+
+		</select>
+		<label>City:</label>
+		<select>
+			<option value="Course">Vadodara</option>
+			<option value="BCA">Ahmedabad</option>
+			<option value="BCA">Surat</option>
+			<option value="BCA">Gandhinagar</option>
+			<option value="BCA">Rajkot</option>
+			<option value="BCA">Other</option>
+		</select><br><br>
+		<label>
+			College name :
+		</label>
+		<select>
+			<option value="Course">L.D COLLEGE OF ENGINEERING</option>
+			<option value="BCA">MAHARAJA SAYAJIRAO UNIVERSITY</option>
+			<option value="BBA">PARUL UNIVERSITY</option>
+			<option value="B.Tech">NIT SURAT</option>
+			<option value="MBA">DAICT</option>
+			<option value="MCA">BITS</option>
+			<option value="M.Tech">GEC MODASA</option>
+		</select><br><br>
+		Email:
+		<input type="email" id="email" name="email" /> <br>
+
+		<br> <br>
+
+		PRN NO :
+		<input type="PRN no " id="pass" name="pass"> <br>
+		<br> <br>
+		Password:
+		<input type="Password" id="pass" name="pass"> <br>
+		<br> <br>
+		Re-type password:
+		<input type="Password" id="repass" name="repass"> <br> <br>
+		<input type="submit" value="Submit" />
+	</form>
+</body>
+
+</html>
