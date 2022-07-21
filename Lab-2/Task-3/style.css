@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+}
+/* # # # # # # # # # # # # # # # # # # # # # # # */
+
+/* First Blue Nav bar  */
+.nav-1{
+    background-color: #0098DB;
+    margin: 0%;
+    width: 100%;
+}
+.nav-1 ul{
+    margin: 10px;
+}
+/* Div list inside the div ul */
+.list{
+    display: inline-block;
+    width: 70%;
+}
+.nav-1 li{
+    margin-top: auto;
+    display: inline-block;
+    list-style: none;
+    border-right: 1px solid white;
+    padding-right: 18px;
+    font-size: 100%;
+}
+.nav-1 a{
+    color: antiquewhite;
+}
+.icon{
+    display: inline-block;
+}
+
+/* # # # # # # # # # # # # # # # # # # # # # # # */
+
+/* This is the heading include Name and msu logo and NAAC logo  */
+.head h2{
+    display: inline-block;
+    vertical-align: text-bottom;
+    text-transform: uppercase;
+    margin: 1.5%;
+}   
+.main-logo{
+    margin: 2%;
+} 
+.msu-logo{
+    width: 8%;
+    margin-left: 5%;
+}    
+.naac{
+    width: 8%;
+    float: right;
+    margin-right: 4%;
+}  
+/* # # # # # # # # # # # # # # # # # # # # # # # */
+.second-nav{
+    background-color: blue;
+}
+.second-nav ul{
+    list-style: none;
+    text-align: center;
+}
+.second-nav li{
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 0.5% 1%;
+    color: wheat;
+    font-size: 1.1rem;
+}
+.second-nav li:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+/* # # # # # # # # # # # # # # # # # # # # # # # */
+
+

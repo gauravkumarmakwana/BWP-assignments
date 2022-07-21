@@ -1,0 +1,9 @@
+fieldset{
+    background-color: rgb(240, 240, 155);
+}
+legend{
+    color: rgba(255, 3, 3, 0.766);
+}
+.every-div{
+    margin: 2px;
+}

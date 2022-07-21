@@ -1,0 +1,146 @@
+<!-- 2. Create a student registration form using the following tags <form>, <input> , <textarea>, <button>, <select>, <option>The registration form must consist of following information : First Name, Middle Name, Last Name, Gender (use radio button), Address, Phone No., email id, Hobbies (use checkbox), City, State, Country, College Name (use dropdown menu) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link rel="stylesheet" href="task-2.css">
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Name</legend>
+            <div class="every-div">
+                <label for="fname">First Name</label>
+                <input type="text" name="First_name" id="fname" placeholder="First Name">
+            </div>
+            <div class="every-div">
+                <label for="mname">Middle Name</label>
+                <input type="text" name = "middleName" id="Mname" placeholder="Middel Name">
+            </div>
+            <div class="every-div">
+                <label for="lname">Last Name</label>
+                <input type="text" name="lastName" id="Lname" placeholder="Last Name">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Gender</legend>
+            <div class="every-div">
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="male">Male</label>
+            </div>
+            <div class="every-div">
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label>
+            </div>
+            <div class="every-div">
+                <input type="radio" name="gender" id="other" value="other">
+                <label for="other">Other</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Contact</legend>
+            <div class="every-div">
+                <label for="pNo.">Phone No.</label>
+                <input type="number" name="phoneNo." id="pNo.">
+            </div>
+            <div class="every-div">
+                <label for="email">E-Mail</label>
+                <input type="email" name="email" id="email" placeholder="example@xyz.com">
+            </div>
+            <div class="every-div">
+                <label for="state">State</label>
+                <select name="state" id="state">
+                    <option value="gujarat">Gujarat</option>
+                    <option value="rajsthan">Rajsthan</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="J. & K.">J. & K.</option>
+                    <option value="Assam">Assam</option>
+                    <option value="U . P.">U . P.</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="West Bengal">West Bengal</option>
+                    <option value="Maharastra">Maharastra</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="M. P.">M. P.</option>
+                    <option value="Hariyana">Hariyana</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Odhisa">Odhisa</option>
+                    <option value="TamilNadu">TamilNadu</option>
+                    <option value="Arunachal Paradesh">Arunachal Paradesh</option>
+                    <option value="Zaekhand">Zaekhand</option>
+                    <option value="Chattishgardh">Chattishgardh</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="manipur">manipur</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Delhi">Delhi</option>
+                </select>
+            </div>
+            <div class="every-div">
+                <label for="city">City</label>
+                <input type="text" name="city" id="city">
+            </div>
+            <div class="every-div">
+                <label for="pincode">Pin Code</label>
+                <input type="number" name="pinCode" id="pincode">
+            </div>
+            <div class="every-div">
+                <label for="address">Address</label>
+                <textarea name="address" id="address" cols="30" rows="3">Main Bazar</textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <div  class="every-div">
+                <h4>Hobbies</h4>
+                <div>
+                    <input type="checkbox" name="hobbies" id="Cricket" value="Cricket">
+                    <label for="Cricket">Cricket</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="hobbies" id="Song" value="Song">
+                    <label for="Song">Song</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="hobbies" id="Chess" value="Chess">
+                    <label for="Chess">Chess</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="hobbies" id="Reading" value="Reading">
+                    <label for="Reading">Reading</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="hobbies" id="Cycling" value="Cycling">
+                    <label for="Cycling">Cycling</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="hobbies" id="Swimming" value="Swimming">
+                    <label for="Swimming">Swimming</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="hobbies" id="Programming" value="Programming">
+                    <label for="Programming">Programming</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="hobbies" id="Yoga" value="Yoga">
+                    <label for="Yoga">Yoga</label>
+                </div>
+            </div>
+            <div  class="every-div">
+                <label for="college">Choose Your College</label>
+                <select name="coolegename" id="college">
+                    <option value="msu">The Maharaja SayajiRao University</option>
+                    <option value="parul">Parul University</option>
+                    <option value="vit">Vadodara Institue of Technology</option>
+                    <option value="ldce">L. D. Engineering College</option>
+                </select>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
