@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    width: 1366px;
+    width: 1346px;
 }
 /* # # # # # # # # # # # # # # # # # # # # # # # */
 
@@ -81,7 +81,7 @@ body{
 
 .vertical-nav{
     display: inline-block;
-    width: 225px;
+    width: 215px;
     background-color: #0098DB;
 }
 .vertical-nav ul{
@@ -113,4 +113,54 @@ body{
 }
 .scrolling img{
     width: 916px;
+}
+
+/* # # # # # # # # # # # # # # # # # # # # # # # */
+.color-button{
+    display: flex;
+    justify-content: space-around;
+    padding-inline-start: 100px;
+    padding-inline-end: 100px;
+}
+.color-button li{
+    list-style-type: none;
+    border: 1px solid rgb(233, 182, 182);
+    border-radius: 5px;
+    width: 170px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.color-button li:hover{
+    background-color: #403737;
+}
+.color-button a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.color-button img{
+    width: 20px;
+    height: 20px;
+    vertical-align: top;
+}
+.first-btn{
+    background-color: rgb(171, 116, 13);
+}
+.second-btn{
+    background-color: rgb(255, 0, 230);
+}
+.third-btn{
+    background-color: rgb(255, 64, 0);
+}
+.fourth-btn{
+    background-color: rgb(2, 180, 168);
+}
+.fifth-btn{
+    background-color: hwb(234deg 15% 41%);
+}
+.sixth-btn{
+    background-color: tomato;
 }
