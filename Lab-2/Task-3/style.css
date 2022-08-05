@@ -194,3 +194,29 @@ body{
     /* vertical-align: middle; */
     margin: 15px;
 }
+/* # # # # # # # # # # # # # # # # # # # # # # # 
+    Video Section
+# # # # # # # # # # # # # # # # # # # # # # # */
+.video-sec{
+    margin-top: 15px;
+    background-color: #403737;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 330px;
+}
+.video-sec video{
+    width: 500px;
+}
+.join{
+    display: inline-block;
+    width: 700px;
+}
+.read-more{
+    text-decoration: none;
+    color: white;
+    background-color: #00db3a;
+    padding: 10px 15px;
+}
