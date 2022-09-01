@@ -3,7 +3,16 @@ fieldset{
 }
 legend{
     color: rgba(255, 3, 3, 0.766);
+    font-size: 1.5rem;
+    font-weight: 800;
 }
 .every-div{
     margin: 2px;
+}
+/* Accent-Color */
+input[type = radio]{
+    accent-color: red;
+}
+input[type=checkbox]{
+    accent-color: green;
 }
