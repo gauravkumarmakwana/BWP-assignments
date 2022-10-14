@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task - 2 || Lab - 7</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Cricket Score</title>
+    <style>
+        input {
+            border: 0px solid black;
+        }
+        label {
+            margin: 4px;
+            font-weight: bold;
+        }
+        #Batsman,
+        #Bowle,
+        #RCB {
+            display: none;
+        }
+        body {
+            background-image: -webkit-linear-gradient(left, #d6c61bb6, #5f3bff, #c83a9e);
+        }
+    </style>
+</head>
+<body>
+    <div class="container p-3 my-3 border shadow-lg p-3 mb-5 bg-white rounded" id="m" name="main">
+        <h1>
+            <center>
+                <p id="teams"> RCB vs CSK </p>
+            </center>
+        </h1>
+        <center>
+            <label> <span id="tm"></span> :</label>
+            <span id="total">
+                0
+            </span>
+            /
+            <span id="wicket">
+                0
+            </span><br>
+            <label>Overs :</label>
+            <span id="over">
+                0.0
+            </span>
+        </center>
+        <label>Current ball :</label> <span id="data">
+            0
+        </span>
+        <br>
+        <label>Overview of last over :</label>
+        <span id="overview">
+        </span>
+        <br>
+        </center>
+        <label> <span id="tm1"></span> is Batting</label>
+        <div id="RCB">
+            <center>
+                <label> <span id="tm2"></span> :</label>
+                <span id="total1">
+                    0
+                </span>
+                /
+                <span id="wicket1">
+                    0
+                </span><br>
+                <label>Overs :</label>
+                <span id="over1">
+                    0.0
+                </span>
+            </center>
+            <label>Current ball :</label> <span id="data1">
+                0
+            </span>
+            <br>
+            <label>Overview of last over :</label>
+            <span id="overview1">
+            </span>
+            <br>
+            <label><span id="tm12"></span></label>
+        </div>
+        <center>
+            <h1>
+                <div id="result" style="color: RED;"></div>
+            </h1>
+        </center>
+    </div>
+    <script>
+        let i = 0;
+        let j = 0;
+        let m = 0;
+        let n = 0;
+        let tem = true;
+        let total = 0;
+        let wicket = 0;
+        let total1 = 0;
+        let wicket1 = 0;
+        let k = 0;
+        let input = document.getElementById("data");
+        let tm = document.getElementById("tm");
+        let tm1 = document.getElementById("tm1");
+        let overview = document.getElementById("overview");
+        let totali = document.getElementById("total");
+        let wicketi = document.getElementById("wicket");
+        let over = document.getElementById("over");
+        let input1 = document.getElementById("data1");
+        let tm2 = document.getElementById("tm2");
+        let tm12 = document.getElementById("tm12")
+        let overview1 = document.getElementById("overview1");
+        let totali1 = document.getElementById("total1");
+        let wicketi1 = document.getElementById("wicket1");
+        let over1 = document.getElementById("over1");
+        let teams = document.getElementById("teams");
+        let result = document.getElementById("result");
+        let RCB = document.getElementById("RCB");
+        function loadDoc1() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    let mydata = JSON.parse(this.responseText);
+                    teams.innerText = mydata.team[0] + " vs " + mydata.team[1];
+                    if (k < 2) {
+                        if (tm === true) {
+                            tm.innerText = mydata.team[0];
+                        }
+                        tm.innerText = mydata.team[0];
+                        tm1.innerText = mydata.team[0];
+                        if (i == 5) {
+                            clearInterval(myVar);
+                            overview.innerText = mydata.over[j][0] + " , " + mydata.over[j][1] + " , " + mydata.over[j][2] + " , " + mydata.over[j][3] + " , " + mydata.over[j][4] + " , " + mydata.over[j][5];
+                            k++;
+                            j++;
+                            i = -1;
+                            fun1();
+                        }
+                        i++;
+                        over.innerText = j + "." + i;
+                        input.innerText = mydata.over[j][i];
+                        if (mydata.over[j][i] == "w") {
+                            wicket++;
+                            wicketi.innerText = wicket;
+                            input.innerText = "wicket";
+                        }
+                        else {
+                            total = total + mydata.over[j][i];
+                            input.innerText = mydata.over[j][i];
+                            totali.innerText = total;
+                        }
+                    }
+                    else {
+                        RCB.style.display = "block";
+                        if (total > total1) {
+                            if (tm === true) {
+                                tm.innerText = mydata.team[1];
+                            }
+                            tm2.innerText = mydata.team[1];
+                            tm12.innerText = mydata.team[1] + " is Batting ";
+                            if (mydata.over[j][i] == "w") {
+                                wicket1++;
+                                wicketi1.innerText = wicket1;
+                                input1.innerText = "wicket";
+                            }
+                            else {
+                                total1 = total1 + mydata.over[j][i];
+                                input1.innerText = mydata.over[j][i];
+                                totali1.innerText = total1;
+                            }
+                            if (i == 5) {
+                                clearInterval(myVar);
+                                overview1.innerText = mydata.over[j][0] + " , " + mydata.over[j][1] + " , " + mydata.over[j][2] + " , " + mydata.over[j][3] + " , " + mydata.over[j][4] + " , " + mydata.over[j][5];
+                                k++;
+                                m++;
+                                j++;
+                                fun1();
+                                if (n == 5) {
+                                    if (m == 2) {
+                                        if (total > total1) {
+                                            result.innerText = "RCB WON THE MATCH!!!";
+                                        }
+                                    }
+                                }
+                                i = -1;
+                                n = -1;
+                            }
+                            i++;
+                            n++;
+                            over1.innerText = m + "." + n;
+                            input1.innerText = mydata.over[j][i];
+                        }
+                        else if (total == total1) {
+                            result.innerText = "TIE!!!";
+                        }
+                        else {
+                            result.innerText = "CSK WON THE MATCH !!!";
+                        }
+                    }
+
+                }
+            };
+            xhttp.open("GET", "Q2Data.json", true);
+            xhttp.send();
+        }
+        var myVar = setInterval(loadDoc1, 2000);
+        var myVar2;
+        function fun1() {
+            myVar = setInterval(loadDoc1, 5000);
+            myVar2 = setInterval(fun2, 5000);
+
+        }
+        function fun2() {
+            clearInterval(myVar);
+            clearInterval(myVar2);
+            myVar = setInterval(loadDoc1, 2000);
+        }
+    </script>
+</body>
+</html>

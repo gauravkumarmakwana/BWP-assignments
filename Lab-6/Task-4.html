@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone number validation</title>
+</head>
+<style>
+    body {
+        background-color: #b044ebc6;
+    }
+    h1 {
+        display: flex;
+        justify-content: center;
+    }
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<body>
+    <h1>Phone number validation</h1>
+    <form action="" onsubmit="validation()">
+        Enter Phone number:
+        <input type="text" name="Phone number" id="number"><br>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        function validation() {
+            var x = document.getElementById('number').value;
+            if ((x.length == '10') && (x.charAt(0) == '9' || x.charAt(0) == '8' || x.charAt(0) == '7' || x.charAt(0) == '6')) {
+                return true;
+            }
+            else if ((x.length == '10') && (x.charAt(0) == '0' || x.charAt(0) == '1' || x.charAt(0) == '2' || x.charAt(0) == '3' || x.charAt(0) == '4' || x.charAt(0) == '5')) {
+                alert("Enter number starting with 6, 7, 8, 9");
+                return false;
+            }
+            else {
+                alert('Enter 10 digit number only');
+            }
+        }
+    </script>
+</body>
+</html>

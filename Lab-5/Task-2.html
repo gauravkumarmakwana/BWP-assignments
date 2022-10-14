@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task - 2 || Lab - 5</title>
+</head>
+<body>
+    <h2>Type Writer</h2>
+    <button onclick="typeWriter()">Type</button>
+    <p id="output"></p>
+    <script>
+        var i = 0;
+        var speed = 50;
+        var txt = 'My Name is Gaurav. I\'m a Web Developer.';
+        function typeWriter(){
+            if(i < txt.length){
+                document.getElementById('output').innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+    </script>
+</body>
+</html>

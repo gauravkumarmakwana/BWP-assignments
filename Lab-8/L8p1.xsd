@@ -1,0 +1,18 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="players">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="player" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="player-name"/>
+              <xs:element type="xs:byte" name="batting-average"/>
+              <xs:element type="xs:short" name="highest-score"/>
+              <xs:element type="xs:string" name="fielding-perfomance"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

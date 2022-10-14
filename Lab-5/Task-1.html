@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task - 1 || Lab - 5</title>
+    <style>
+        #video{
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <video src="./static/video.mp4" controls id="video" height="300px"></video>
+    <button id="play">Play</button>
+    <button id="pause">Pause</button>
+    <button id="small">Small</button>
+    <button id="medium">medium</button>
+    <button id="large">Large</button>
+    <script>
+        var video = document.getElementById('video');
+        var play = document.getElementById('play');
+        var pause = document.getElementById('pause');
+        var small = document.getElementById('small');
+        var medium = document.getElementById('medium');
+        var large = document.getElementById('large');
+        play.addEventListener('click', playFunction);
+        pause.addEventListener('click', pauseVideo);
+        small.addEventListener('click', smallScreen);
+        medium.addEventListener('click', mediumScreen);
+        large.addEventListener('click', largeScreen);
+        function playFunction(){
+            video.play();
+        }
+        function pauseVideo(){
+            video.pause();
+        }
+        function smallScreen(){
+            video.style.height = '250px';
+        }
+        function mediumScreen(){
+            video.style.height = '500px';
+        }
+        function largeScreen(){
+            video.style.height = '1000px';
+        }
+    </script>
+</body>
+</html>

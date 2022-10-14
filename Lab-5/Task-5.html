@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task - 5 || Lab - 5</title>
+</head>
+<body>
+    
+        <input type="text" id="input">
+        <button id="btn" onclick="fun()">Print</button>
+        <p id="output"></p>
+
+    <script>
+        function fun(){
+            var txt = document.getElementById('input');
+            var output = document.getElementById('output');
+            var n = txt.value.length;
+            var start = -1, end = n;
+            txt = txt.value;
+            for(var i = 0; i < n; ++i){
+                if(txt[i] == 'a'){
+                    start = i;
+                    break;
+                }
+            }
+            for(var i = n-1; i >= 0; --i){
+                if(txt[i] == 'a'){
+                    end = i;
+                    break;
+                }
+            }
+            output.innerHTML = txt.substring(start+1, end);
+        }
+    </script>
+
+</body>
+</html>

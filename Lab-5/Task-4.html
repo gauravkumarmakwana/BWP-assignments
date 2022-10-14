@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task - 4 || Lab - 5</title>
+</head>
+<body>
+    <form onsubmit="check()">
+        <input type="number" name="phonenumber" id="num" placeholder="Enter Number" required>
+        <input type="submit" value="submit">
+    </form>
+
+    <script>
+        function check(){
+            var n = document.getElementById('num');
+
+            if(!(6 <= n.value[0] && n.value[0] <= 9)){
+                window.alert('Number must be start with 6 or 7 or 8 or 9');
+            }
+            else{
+                if(n.value.length != 10){
+                    window.alert('Number length must be 10');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

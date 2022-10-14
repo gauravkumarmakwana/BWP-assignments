@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<players>
+	<player>
+		<player-name>virat kohli</player-name>
+		<batting-average>45</batting-average>
+		<highest-score>158</highest-score>
+		<fielding-perfomance>best</fielding-perfomance>
+	</player>
+	<player>
+		<player-name>rohit sharma</player-name>
+		<batting-average>84</batting-average>
+		<highest-score>200</highest-score>
+		<fielding-perfomance>average</fielding-perfomance>
+	</player>
+	<player>
+		<player-name>lokesh rahul</player-name>
+		<batting-average>89</batting-average>
+		<highest-score>256</highest-score>
+		<fielding-perfomance>worst</fielding-perfomance>
+	</player>
+</players>

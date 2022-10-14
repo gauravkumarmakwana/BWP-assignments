@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="l8p5.xsl" ?> 
+<items>
+		<item>
+            <item_name>soap</item_name>
+            <price>200</price>
+        </item>
+		<item>
+            <item_name>tea powder</item_name>
+            <price>40</price>
+		</item>
+		<item>
+            <item_name>kofee powder</item_name>
+            <price>210</price>
+		</item>
+		<item>
+            <item_name>books</item_name>
+            <price>390</price>
+		</item>
+		
+</items>

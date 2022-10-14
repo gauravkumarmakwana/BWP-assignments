@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task - 6 - III || Lab-5</title>
+</head>
+<body>
+    <h3>When the key is released background should change to blue.</h3>
+</body>
+    <script>
+        var bd = document.getElementsByTagName('body');
+        bd[0].style.backgroundColor = 'white';
+        bd[0].addEventListener("keyup", fun);
+        bd[0].addEventListener("keypress", keyPressFun);
+        function fun(){
+            bd[0].style.backgroundColor = '#a4a4ff';
+        }
+        function keyPressFun(){
+            bd[0].style.backgroundColor = 'white';
+        }
+    </script>
+</html>

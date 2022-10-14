@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style>
+        body {
+            background-image: linear-gradient(to left, rgb(216, 255, 19), rgba(212, 30, 188, 0.4));
+        }
+        input,
+        label {
+            margin: 5px;
+            margin-left: 30px;
+        }
+        input {
+            border: black solid 1px;
+            display: flex;
+
+        }
+        .main1 {
+            background-color: white;
+            width: 400px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 10px 10px 15px black;
+        }
+    </style>
+    <script>
+        var i = 0;
+        function stock() {
+            var ajax = new XMLHttpRequest();
+            ajax.onreadystatechange = function () {
+                if (this.readyState = 4 && this.status == 200) {
+                    var output = this.responseText;
+                    var result = output.split("$");
+                    var o1, o2, o3, o4, n1, n2, n3, n4;
+                    o1 = document.forms["form1"]["s1"].value;
+                    o2 = document.forms["form1"]["s2"].value;
+                    o3 = document.forms["form1"]["s3"].value;
+                    o4 = document.forms["form1"]["s4"].value;
+                    document.forms["form1"]["s1"].value = result[i];
+                    document.forms["form1"]["s2"].value = result[i + 1];
+                    document.forms["form1"]["s3"].value = result[i + 2];
+                    document.forms["form1"]["s4"].value = result[i + 3];
+                    n1 = document.forms["form1"]["s1"].value;
+                    n2 = document.forms["form1"]["s2"].value;
+                    n3 = document.forms["form1"]["s3"].value;
+                    n4 = document.forms["form1"]["s4"].value;
+                    i += 1;
+                    if ((n1 - o1) > 0) {
+                        document.forms["form1"]["s1"].style.backgroundColor = "green";
+                    }
+                    else {
+                        document.forms["form1"]["s1"].style.backgroundColor = "red";
+                    }
+                    if ((n2 - o2) > 0) {
+                        document.forms["form1"]["s2"].style.backgroundColor = "green";
+                    }
+                    else {
+                        document.forms["form1"]["s2"].style.backgroundColor = "red";
+                    }
+                    if ((n3 - o3) > 0) {
+                        document.forms["form1"]["s3"].style.backgroundColor = "green";
+                    }
+                    else {
+                        document.forms["form1"]["s3"].style.backgroundColor = "red";
+                    }
+                    if ((n4 - o4) > 0) {
+                        document.forms["form1"]["s4"].style.backgroundColor = "green";
+                    }
+                    else {
+                        document.forms["form1"]["s1"].style.backgroundColor = "red";
+                    }
+                    if (i == 8) {
+                        i = 0;
+                    }
+                }
+            };
+            ajax.open("GET", "output.txt", true);
+            ajax.send();
+            setTimeout(call, 1000);
+        }
+        function call() {
+            setTimeout(stock, 1);
+        }
+    </script>
+    <title>Task - 1 || Lab - 7</title>
+</head>
+<body onload="call()">
+    <form name="form1" class="main1">
+        <p><label>Paytm </label><input type="text" name="s1" value="0" readonly /></p>
+        <p><label>Adani</label><input type="text" name="s2" value="0" readonly /></p>
+        <p><label>Ambuja Cement </label><input type="text" name="s3" value="0" readonly /></p>
+        <p><label>Diva Labs</label><input type="text" name="s4" value="0" readonly /></p>
+    </form>
+    <p id="p"></p>
+</body>
+</html>

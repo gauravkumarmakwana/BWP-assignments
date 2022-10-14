@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task - 3 || Lab - 7</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <title>Live Time</title>
+    <style>
+        body {
+            background-image: -webkit-linear-gradient(right, #ff0000, #e9adad, #d7dd83);
+        }
+        #time {
+            position: absolute;
+            color: white;
+            background-color: black;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="time">
+        <span id="year"></span> -
+        <span id="month"></span> -
+        <span id="day"></span> <br>
+        <span id="hour"></span> :
+        <span id="min"></span> :
+        <span id="sec"></span> <br>
+    </div>
+    <script>
+        let time = document.getElementById("time");
+        let year;
+        let month;
+        let day;
+        let hour;
+        let min;
+        let sec;
+        let result;
+        let extra;
+        let yeari = document.getElementById("year");
+        let monthi = document.getElementById("month");
+        let dayi = document.getElementById("day");
+        let houri = document.getElementById("hour");
+        let mini = document.getElementById("min");
+        let seci = document.getElementById("sec");
+        function loadDoc1() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    let mydata = JSON.parse(this.responseText);
+                    result = mydata.datetime.split("-");
+                    year = result[0];
+                    month = result[1];
+                    extra = result[2];
+                    result = extra.split("T");
+                    day = result[0];
+                    extra = result[1];
+                    result = extra.split(":");
+                    hour = result[0];
+                    min = result[1];
+                    extra = result[2];
+                    result = extra.split(".");
+                    sec = result[0];
+                    extra = result[1];
+                    yeari.innerText = year;
+                    monthi.innerText = month;
+                    dayi.innerText = day;
+                    houri.innerText = hour;
+                    mini.innerText = min;
+                    seci.innerText = sec;
+                    setInterval(() => {
+                        timer()
+                    }, 1000);
+                }
+            };
+            xhttp.open("GET", "http://worldtimeapi.org/api/timezone/Asia/Kolkata", true);
+            xhttp.send();
+        }
+        if (sec == undefined) {
+            loadDoc1();
+        }
+        function timer() {
+            sec++;
+            if (sec == 60) {
+                min++;
+                sec = 0;
+            }
+            if (min == 60) {
+                hour++;
+                min = 0;
+            }
+            if (hour == 24) {
+                day++;
+                hour = 0;
+            }
+            yeari.innerText = year;
+            monthi.innerText = month;
+            dayi.innerText = day;
+            houri.innerText = hour;
+            mini.innerText = min;
+            seci.innerText = sec;
+        }
+        loadDoc1();
+       //API LINK:http://worldtimeapi.org/api/
+    </script>
+</body>
+</html>

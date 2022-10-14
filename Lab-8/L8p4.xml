@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="l8p4.xsl" ?> 
+
+<books>
+	<book>
+		<book_name>Basic of web prog.</book_name>
+		<author>vilas mam</author>
+		<isbn>2345435455</isbn>
+		<quantity>344</quantity>
+	</book>
+	<book>
+		<book_name>theory of computatio</book_name>
+		<author>hetal mam</author>
+		<isbn>2334876593</isbn>
+		<quantity>1221</quantity>
+	</book>
+	<book>
+		<book_name>computer organization</book_name>
+		<author>morris manno</author>
+		<isbn>9876543212</isbn>
+		<quantity>200000000</quantity>
+	</book>
+</books>
+
