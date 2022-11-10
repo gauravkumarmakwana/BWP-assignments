@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="Task-2.xsl" type="text/xsl"?>
+
+<students>
+       <student>
+              <name>Gaurav Makwana</name>
+              <seat-no>412009</seat-no>
+              <percentage>71.01%</percentage>
+              <status>pass</status>
+       </student>
+       <student>
+              <name>Dipak Damor</name>
+              <seat-no>412007</seat-no>
+              <percentage>73.01%</percentage>
+              <status>pass</status>
+       </student>
+       <student>
+              <name>Gohel Manav</name>
+              <seat-no>412014</seat-no>
+              <percentage>72.01%</percentage>
+              <status>pass</status>
+       </student>
+</students>

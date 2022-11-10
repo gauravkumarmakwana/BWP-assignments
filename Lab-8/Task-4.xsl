@@ -10,18 +10,15 @@
       <th>quantity</th>   
    </tr>
     <xsl:for-each select="book">
-	
     <tr>
       <td><xsl:value-of select="book_name"/></td>
       <td><xsl:value-of select="author"/></td>
 	  <td><xsl:value-of select="isbn"/></td>
       <td><xsl:value-of select="quantity"/></td>
-     
     </tr>
     </xsl:for-each>
   </table>
   </body>
   </html>
 </xsl:template>
-
 </xsl:stylesheet>
